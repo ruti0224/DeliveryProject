@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1544ED-C746-46F0-A607-890BE75E285C}|DeliveryTest\\DeliveryTest.csproj|t:\\group b\\netcore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\deliveryproject\\deliverytest\\recipientscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1544ED-C746-46F0-A607-890BE75E285C}|DeliveryTest\\DeliveryTest.csproj|solutionrelative:deliverytest\\recipientscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B1544ED-C746-46F0-A607-890BE75E285C}|DeliveryTest\\DeliveryTest.csproj|t:\\group b\\netcore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\deliveryproject\\deliverytest\\deliverscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B1544ED-C746-46F0-A607-890BE75E285C}|DeliveryTest\\DeliveryTest.csproj|solutionrelative:deliverytest\\deliverscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62041CC9-97F6-4D01-A590-10212D7D1389}|DeliveryProject\\DeliveryProject.csproj|t:\\group b\\netcore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\deliveryproject\\deliveryproject\\controllers\\recipientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62041CC9-97F6-4D01-A590-10212D7D1389}|DeliveryProject\\DeliveryProject.csproj|solutionrelative:deliveryproject\\controllers\\recipientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62041CC9-97F6-4D01-A590-10212D7D1389}|DeliveryProject\\DeliveryProject.csproj|t:\\group b\\netcore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\deliveryproject\\deliveryproject\\controllers\\deliverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62041CC9-97F6-4D01-A590-10212D7D1389}|DeliveryProject\\DeliveryProject.csproj|solutionrelative:deliveryproject\\controllers\\deliverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeliversController.cs",
+              "DocumentMoniker": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryProject\\Controllers\\DeliversController.cs",
+              "RelativeDocumentMoniker": "DeliveryProject\\Controllers\\DeliversController.cs",
+              "ToolTip": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryProject\\Controllers\\DeliversController.cs",
+              "RelativeToolTip": "DeliveryProject\\Controllers\\DeliversController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T09:41:23.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipientsController.cs",
+              "DocumentMoniker": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryProject\\Controllers\\RecipientsController.cs",
+              "RelativeDocumentMoniker": "DeliveryProject\\Controllers\\RecipientsController.cs",
+              "ToolTip": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryProject\\Controllers\\RecipientsController.cs",
+              "RelativeToolTip": "DeliveryProject\\Controllers\\RecipientsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T09:41:04.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeliversControllerTest.cs",
+              "DocumentMoniker": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryTest\\DeliversControllerTest.cs",
+              "RelativeDocumentMoniker": "DeliveryTest\\DeliversControllerTest.cs",
+              "ToolTip": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryTest\\DeliversControllerTest.cs",
+              "RelativeToolTip": "DeliveryTest\\DeliversControllerTest.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAADwvwsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T09:07:30.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecipientsControllerTest.cs",
+              "DocumentMoniker": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryTest\\RecipientsControllerTest.cs",
+              "RelativeDocumentMoniker": "DeliveryTest\\RecipientsControllerTest.cs",
+              "ToolTip": "T:\\Group B\\NetCore\\\u05D9\u05E2\u05DC \u05E9\u05D8\u05E8\u05D9\u05EA\\DeliveryProject\\DeliveryTest\\RecipientsControllerTest.cs",
+              "RelativeToolTip": "DeliveryTest\\RecipientsControllerTest.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T09:41:00.042Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
