@@ -71,10 +71,7 @@ namespace DeliveryProject.Controllers
                 return NotFound();
 
             }
-            d.Email = deliver.Email;
-            d.Name = deliver.Name;
-            d.Address = deliver.Address;
-            d.PhoneNumber = deliver.PhoneNumber;
+            _deliverServ.UpdateDeliver(id,deliver);
             return Ok(d);
         }
 
