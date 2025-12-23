@@ -1,0 +1,93 @@
+﻿using Delivery.Core.Models;
+using Microsoft.AspNetCore.Mvc;
+using Delivery.Core.Services;
+using DeliveryProject.Controllers;
+using Delivery.Service;
+using Delivery.Core.DTOs;
+using DeliveryProject.Models;
+using AutoMapper;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace DeliveryProject.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DeliversController : ControllerBase
+    {
+        private readonly IDeliverService _deliverServ;
+        private readonly IMapper _mapper;
+        public DeliversController(IDeliverService deliverServ, IMapper mapper)
+        {
+            _deliverServ = deliverServ;
+            _mapper = mapper;
+        }
+        // GET: api/<DeliversController>
+        [HttpGet]
+        public IEnumerable<DeliversDTO> Get()
+        {
+            var lst = _deliverServ.GetDelivers();
+            var DTOlst=new List<DeliversDTO>();
+            DTOlst=_mapper.Map< List<DeliversDTO>>(lst);
+            return DTOlst;
+        }
+
+        // GET api/<DeliversController>/5
+        [HttpGet("{id}")]
+        public ActionResult Get(int id)
+        {
+            var d= _deliverServ.GetDeliverByID(id);
+            var dDTO=_mapper.Map<DeliversDTO>(d);
+            if(d==null)
+            {
+                return NotFound();
+            }
+           return Ok(dDTO);
+        }
+
+        // POST api/<DeliversController>
+        [HttpPost]
+        public ActionResult Post([FromBody] DeliversPostModel value)
+        {
+            var deliver=new Delivers { Name=value.Name,Address=value.Address,PhoneNumber=value.PhoneNumber,Email=value.Email};
+            var d = _deliverServ.GetDeliverByID(deliver.Id);
+            if (d == null)
+            {
+              var del= _deliverServ.AddDeliver(deliver);
+                return Ok(del);
+            }
+            return Conflict();
+
+        }
+
+        // PUT api/<DeliversController>/5
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, [FromBody] DeliversPostModel value)
+        {
+            var deliver = new Delivers { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber, Email = value.Email };
+            var d = _deliverServ.GetDeliverByID(id);
+            if (d == null)
+            {
+                return NotFound();
+
+            }
+            d.Email = deliver.Email;
+            d.Name = deliver.Name;
+            d.Address = deliver.Address;
+            d.PhoneNumber = deliver.PhoneNumber;
+            return Ok(d);
+        }
+
+        // DELETE api/<DeliversController>/5
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            var d = _deliverServ.GetDeliverByID(id);
+            if (d == null)
+            {
+                BadRequest();
+            }
+            return NoContent();
+        }
+    }
+}
