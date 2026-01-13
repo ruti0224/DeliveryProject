@@ -4507,11 +4507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
+      "projectUniqueName": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
       "projectName": "DeliveryProject",
-      "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
+      "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
       "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-      "outputPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\obj\\",
+      "outputPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4533,11 +4533,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj": {
-              "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj"
+            "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj": {
+              "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj"
             },
-            "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj": {
-              "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj"
+            "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj": {
+              "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj"
             }
           }
         }

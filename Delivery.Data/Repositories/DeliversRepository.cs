@@ -17,19 +17,19 @@ namespace Delivery.Data.Repositories
         {
             _context = context;
         }
-        public IEnumerable<Delivers> GetDelivers()
+        public async Task<List<Delivers>> GetDeliversAsync()
         {
-            return _context.delivers.Include(d=>d.Packages);
+            return await _context.delivers.Include(d=>d.Packages).ToListAsync();
 
         }
-        public Delivers GetDeliverByID(int id)
+        public async Task<Delivers> GetDeliverByIDAsync(int id)
         {
-            return _context.delivers.ToList().Find(x=>x.Id==id);
+            return await _context.delivers.FirstAsync(x=>x.Id==id);
 
         }
-        public Delivers AddDeliver(Delivers deliver)
+        public async Task<Delivers> AddDeliverAsync(Delivers deliver)
         {
-            var d = _context.delivers .ToList().Find(p => p.Id == deliver.Id);
+            var d = await _context.delivers.FirstAsync(p => p.Id == deliver.Id);
             if (d == null)
             {
                 _context.delivers.Add(deliver);
@@ -37,9 +37,9 @@ namespace Delivery.Data.Repositories
             }
             return d;
         }
-        public Delivers UpdateDeliver(int id, Delivers deliver)
+        public async Task<Delivers> UpdateDeliverAsync(int id, Delivers deliver)
         {
-            var d = _context.delivers.ToList().Find(pac => pac.Id == deliver.Id);
+            var d = await _context.delivers.FirstAsync(pac => pac.Id == deliver.Id);
             if (d != null)
             {
                 d.Email = deliver.Email;
@@ -49,17 +49,17 @@ namespace Delivery.Data.Repositories
             }
             return d;
         }
-        public void DeleteDeliver(int id)
+        public async Task DeleteDeliverAsync(int id)
         {
-            var d = _context.delivers.ToList().Find(p => p.Id == id);
+            var d = await _context.delivers.FirstAsync(p => p.Id == id);
             if (d != null)
             {
                 _context.delivers.Remove(d);
             }
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

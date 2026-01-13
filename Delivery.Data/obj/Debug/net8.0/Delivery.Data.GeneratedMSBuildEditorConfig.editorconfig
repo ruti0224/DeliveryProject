@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Delivery.Data
-build_property.ProjectDir = T:\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Data\
+build_property.ProjectDir = \\ZZ-FILESRV\Handesaim2\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Data\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

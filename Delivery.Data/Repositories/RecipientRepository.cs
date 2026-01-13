@@ -17,19 +17,19 @@ namespace Delivery.Data.Repositories
         {
             _context = context;
         }
-        public IEnumerable<Recipients> GetRecipients()
+        public async Task<List<<Recipients>> GetRecipientsAsync()
         {
-            return _context.recipients.Include(r=>r.Packages);
+            return await _context.recipients.Include(r=>r.Packages).ToListAsync();
 
         }
-        public Recipients GetRecipientByID(int id)
+        public async Task<Recipients> GetRecipientByIDAsync(int id)
         {
-            return _context.recipients.FirstOrDefault(x => x.Id == id);
+            return await _context.recipients.FirstAsync(x => x.Id == id);
 
         }
-        public Recipients AddRecipient(Recipients recipient)
+        public async Task<Recipients> AddRecipientAsync(Recipients recipient)
         {
-            var r = _context.recipients.FirstOrDefault(p => p.Id == recipient.Id);
+            var r = await _context.recipients.FirstAsync(p => p.Id == recipient.Id);
             if (r == null)
             {
                 _context.recipients.Add(recipient);
@@ -37,9 +37,9 @@ namespace Delivery.Data.Repositories
             }
             return r;
         }
-        public Recipients UpdateRecipient(int id, Recipients recipient)
+        public async Task<Recipients> UpdateRecipientAsync(int id, Recipients recipient)
         {
-            var r = _context.recipients.FirstOrDefault(pac => pac.Id == recipient.Id);
+            var r = await _context.recipients.FirstAsync(pac => pac.Id == recipient.Id);
             if (r != null)
             {
                 r.Email = recipient.Email;
@@ -49,17 +49,17 @@ namespace Delivery.Data.Repositories
             }
             return r;
         }
-        public void DeleteRecipient(int id)
+        public async Task DeleteRecipientAsync(int id)
         {
-            var d = _context.recipients.FirstOrDefault(p => p.Id == id);
+            var d =await _context.recipients.FirstAsync(p => p.Id == id);
             if (d != null)
             {
                 _context.recipients.Remove(d);
             }
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+           await _context.SaveChangesAsync();
         }
     }
 }

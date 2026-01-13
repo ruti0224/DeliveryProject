@@ -25,9 +25,9 @@ namespace DeliveryProject.Controllers
 
         // GET: api/<RecipientsController>
         [HttpGet]
-        public IEnumerable<RecipientsDTO> Get()
+        public async Task<List<RecipientsDTO>> Get()
         {
-            var rList =_recipientServ.GetRecipients();
+            var rList =await _recipientServ.GetRecipientsAsync();
             var DTOlst=new List<RecipientsDTO>();
             DTOlst=_mapper.Map<List<RecipientsDTO>>(rList);
             return DTOlst;
@@ -35,9 +35,9 @@ namespace DeliveryProject.Controllers
 
         // GET api/<RecipientsController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            var r = _recipientServ.GetRecipientByID(id);
+            var r =await _recipientServ.GetRecipientByIDAsync(id);
             if (r == null)
             {
                 return NotFound();
@@ -47,13 +47,13 @@ namespace DeliveryProject.Controllers
 
         // POST api/<RecipientsController>
         [HttpPost]
-        public ActionResult Post([FromBody] Recipients value)
+        public async Task<ActionResult> Post([FromBody] Recipients value)
         {
             var recipient = new Recipients { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber };
-            var r = _recipientServ.GetRecipientByID(value.Id);
+            var r = await _recipientServ.GetRecipientByIDAsync(value.Id);
             if (r == null)
             {
-              var rec=  _recipientServ.AddRecipient(value);       
+              var rec= await _recipientServ.AddRecipientAsync(value);       
                 return Ok(rec);
             }
             return Conflict();
@@ -61,10 +61,10 @@ namespace DeliveryProject.Controllers
 
         // PUT api/<RecipientsController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Recipients value)
+        public async Task<ActionResult> Put(int id, [FromBody] Recipients value)
         {
             var recipient = new Recipients { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber };
-            var r = _recipientServ.GetRecipientByID(value.Id);
+            var r =await _recipientServ.GetRecipientByIDAsync(value.Id);
             if (r == null)
             {
                 return BadRequest();
@@ -79,9 +79,9 @@ namespace DeliveryProject.Controllers
 
         // DELETE api/<RecipientsController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var r = _recipientServ.GetRecipientByID(id);
+            var r =await _recipientServ.GetRecipientByIDAsync(id);
             if (r == null)
             {
                 BadRequest();

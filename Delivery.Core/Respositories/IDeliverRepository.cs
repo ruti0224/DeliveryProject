@@ -9,13 +9,13 @@ namespace Delivery.Core.Respositories
 {
     public interface IDeliverRepository
     {
-        public IEnumerable<Delivers> GetDelivers();
-        public Delivers GetDeliverByID(int id);
+        public Task<List<Delivers>> GetDeliversAsync();
+        public Task<Delivers> GetDeliverByIDAsync(int id);
 
-        public Delivers AddDeliver( Delivers deliver);
-        public Delivers UpdateDeliver(int id, Delivers deliver);
-        public void DeleteDeliver(int id);
-        public void Save();
+        public Task<Delivers> AddDeliverAsync( Delivers deliver);
+        public Task<Delivers> UpdateDeliverAsync(int id, Delivers deliver);
+        public Task DeleteDeliverAsync(int id);
+        public Task SaveAsync();
 
     }
 }

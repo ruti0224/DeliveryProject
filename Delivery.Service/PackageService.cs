@@ -17,31 +17,31 @@ namespace Delivery.Service
         {
             _packageRepo = packageRepo;
         }
-        public IEnumerable<Packages> GetPackages()
+        public async Task<List<Packages>> GetPackagesAsync()
         {
-            return _packageRepo.GetPackages();
+            return await _packageRepo.GetPackagesAsync();
         }
-        public Packages GetPackageByID(int code)
+        public async Task<Packages> GetPackageByIDAsync(int code)
         {
-            return _packageRepo.GetPackageByID(code);
+            return await _packageRepo.GetPackageByIDAsync(code);
         }
-        public Packages AddPackage(Packages package)
+        public async Task<Packages> AddPackageAsync(Packages package)
         {
-           var p= _packageRepo.AddPackage(package);
-            _packageRepo.Save();
+           var p=await _packageRepo.AddPackageAsync(package);
+            await _packageRepo.SaveAsync();
             return p;
 
         }
-        public Packages UpdatePackages(int id, Packages package)
+        public async Task<Packages> UpdatePackagesAsync(int id, Packages package)
         {
-           var p= _packageRepo.UpdatePackages(id, package);
-            _packageRepo.Save();
+           var p=await _packageRepo.UpdatePackagesAsync(id, package);
+            await _packageRepo.SaveAsync();
             return p;
         }
-        public void DeletePackage(int code)
+        public async Task DeletePackageAsync(int code)
         {
-            _packageRepo.DeletePackage(code);
-            _packageRepo.Save();
+            await _packageRepo.DeletePackageAsync(code);
+            await _packageRepo.SaveAsync();
 
         }
     }

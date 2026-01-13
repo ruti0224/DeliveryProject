@@ -16,22 +16,22 @@ namespace Delivery.Data.Repositories
         {
             _context = context;
         }
-        public IEnumerable<Packages> GetPackages()
+        public async Task<List<Packages>> GetPackagesAsync()
         {
-            return _context.packages.Include(p=>p.Deliver).Include(p=>p.Recipient);
+            return await _context.packages.Include(p=>p.Deliver).Include(p=>p.Recipient).ToListAsync();
 
         }
-        public Packages GetPackageByID(int code)
+        public async Task<Packages> GetPackageByIDAsync(int code)
         {
-            var p= _context.packages.ToList().Find(x => x.Id == code);
+            var p= await _context.packages.FirstAsync(x => x.Id == code);
             if (p == null)
                 return null;
             return p;
 
         }
-        public Packages AddPackage(Packages package)
+        public async Task<Packages> AddPackageAsync(Packages package)
         {
-            var d = _context.packages.ToList().Find(p => p.Id == package.Id);
+            var d =await _context.packages.FirstAsync(p => p.Id == package.Id);
             if (d == null)
             {
                 _context.packages.Add(d);
@@ -39,9 +39,9 @@ namespace Delivery.Data.Repositories
             }
             return d;
         }
-        public Packages UpdatePackages(int code, Packages package)
+        public async Task<Packages> UpdatePackagesAsync(int code, Packages package)
         {
-            var p = _context.packages.ToList().Find(pac => pac.Id == package.Id);
+            var p =await _context.packages.FirstAsync(pac => pac.Id == package.Id);
             if (p != null)
             {
                 p.DeliverID = package.DeliverID;
@@ -52,17 +52,17 @@ namespace Delivery.Data.Repositories
             return p;
         }
 
-        public void DeletePackage(int code)
+        public async Task DeletePackageAsync(int code)
         {
-            var p = _context.packages.ToList().Find(p => p.Id == code);
+            var p = await _context.packages.FirstAsync(p => p.Id == code);
             if (p != null)
             {
                 _context.packages.Remove(p);
             }
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

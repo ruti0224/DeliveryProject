@@ -16,31 +16,31 @@ namespace Delivery.Service
         {
             _recipientRepo = recipientRepo;
         }
-        public IEnumerable<Recipients> GetRecipients()
+        public async Task<List<Recipients>> GetRecipientsAsync()
         {
-            return _recipientRepo.GetRecipients();
+            return await _recipientRepo.GetRecipientsAsync();
         }
-        public Recipients GetRecipientByID(int id)
+        public async Task<Recipients> GetRecipientByIDAsync(int id)
         {
-            return _recipientRepo.GetRecipientByID(id);
+            return await _recipientRepo.GetRecipientByIDAsync(id);
         }
-        public Recipients AddRecipient(Recipients recipient)
+        public async Task<Recipients> AddRecipientAsync(Recipients recipient)
         {
-           var r= _recipientRepo.AddRecipient(recipient);
-            _recipientRepo.Save();
+           var r=await _recipientRepo.AddRecipientAsync(recipient);
+           await _recipientRepo.SaveAsync();
             return r;
         }
-        public Recipients UpdateRecipient(int id, Recipients recipient)
+        public async Task<Recipients> UpdateRecipientAsync(int id, Recipients recipient)
         {
-            var r = _recipientRepo.UpdateRecipient(id, recipient);
-            _recipientRepo.Save();
+            var r =await _recipientRepo.UpdateRecipientAsync(id, recipient);
+            await _recipientRepo.SaveAsync();
             return r;
 
         }
-        public void DeleteRecipient(int id)
+        public async Task DeleteRecipientAsync(int id)
         {
-            _recipientRepo.DeleteRecipient(id);
-            _recipientRepo.Save();
+           await _recipientRepo.DeleteRecipientAsync(id);
+           await _recipientRepo.SaveAsync();
 
         }
     }
