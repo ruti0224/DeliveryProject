@@ -26,9 +26,9 @@ namespace DeliveryProject.Controllers
         [HttpGet]
         public async Task<List<DeliversDTO>> Get()
         {
-            var lst =await _deliverServ.GetDeliversAsync();
-            var DTOlst=new List<DeliversDTO>();
-            DTOlst=_mapper.Map< List<DeliversDTO>>(lst);
+            var lst = await _deliverServ.GetDeliversAsync();
+            var DTOlst = new List<DeliversDTO>();
+            DTOlst = _mapper.Map<List<DeliversDTO>>(lst);
             return DTOlst;
         }
 
@@ -36,24 +36,24 @@ namespace DeliveryProject.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> Get(int id)
         {
-            var d=await _deliverServ.GetDeliverByIDAsync(id);
-            var dDTO=_mapper.Map<DeliversDTO>(d);
-            if(d==null)
+            var d = await _deliverServ.GetDeliverByIDAsync(id);
+            var dDTO = _mapper.Map<DeliversDTO>(d);
+            if (d == null)
             {
                 return NotFound();
             }
-           return Ok(dDTO);
+            return Ok(dDTO);
         }
 
         // POST api/<DeliversController>
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] DeliversPostModel value)
         {
-            var deliver=new Delivers { Name=value.Name,Address=value.Address,PhoneNumber=value.PhoneNumber,Email=value.Email};
+            var deliver = new Delivers { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber, Email = value.Email };
             var d = await _deliverServ.GetDeliverByIDAsync(deliver.Id);
             if (d == null)
             {
-              var del=await _deliverServ.AddDeliverAsync(deliver);
+                var del = await _deliverServ.AddDeliverAsync(deliver);
                 return Ok(del);
             }
             return Conflict();
@@ -65,7 +65,7 @@ namespace DeliveryProject.Controllers
         public async Task<ActionResult> Put(int id, [FromBody] DeliversPostModel value)
         {
             var deliver = new Delivers { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber, Email = value.Email };
-            var d =await _deliverServ.GetDeliverByIDAsync(id);
+            var d = await _deliverServ.GetDeliverByIDAsync(id);
             if (d == null)
             {
                 return NotFound();
@@ -79,7 +79,7 @@ namespace DeliveryProject.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var d =await _deliverServ.GetDeliverByIDAsync(id);
+            var d = await _deliverServ.GetDeliverByIDAsync(id);
             if (d == null)
             {
                 BadRequest();

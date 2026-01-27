@@ -9,7 +9,7 @@ using Delivery.Core.Services;
 
 namespace Delivery.Service
 {
-    public class RecipientService: IRecipientService
+    public class RecipientService : IRecipientService
     {
         private readonly IRecipientRespository _recipientRepo;
         public RecipientService(IRecipientRespository recipientRepo)
@@ -26,21 +26,21 @@ namespace Delivery.Service
         }
         public async Task<Recipients> AddRecipientAsync(Recipients recipient)
         {
-           var r=await _recipientRepo.AddRecipientAsync(recipient);
-           await _recipientRepo.SaveAsync();
+            var r = await _recipientRepo.AddRecipientAsync(recipient);
+            await _recipientRepo.SaveAsync();
             return r;
         }
         public async Task<Recipients> UpdateRecipientAsync(int id, Recipients recipient)
         {
-            var r =await _recipientRepo.UpdateRecipientAsync(id, recipient);
+            var r = await _recipientRepo.UpdateRecipientAsync(id, recipient);
             await _recipientRepo.SaveAsync();
             return r;
 
         }
         public async Task DeleteRecipientAsync(int id)
         {
-           await _recipientRepo.DeleteRecipientAsync(id);
-           await _recipientRepo.SaveAsync();
+            await _recipientRepo.DeleteRecipientAsync(id);
+            await _recipientRepo.SaveAsync();
 
         }
     }

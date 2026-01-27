@@ -1,11 +1,12 @@
 
 using Delivery.Core.Services;
-using DeliveryProject;
+using DeliveryProject.Middleware;
 using Delivery.Core;
 using Delivery.Core.Respositories;
 using Delivery.Service;
 using Delivery.Data.Repositories;
 using Delivery.Data;
+using DeliveryProject;
 //using Delivery.Service;
 //using Delivery.Data.Repositories;
 
@@ -44,6 +45,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseShabbatMiddleware();
 
 app.UseAuthorization();
 

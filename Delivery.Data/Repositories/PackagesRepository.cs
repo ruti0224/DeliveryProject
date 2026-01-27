@@ -18,12 +18,12 @@ namespace Delivery.Data.Repositories
         }
         public async Task<List<Packages>> GetPackagesAsync()
         {
-            return await _context.packages.Include(p=>p.Deliver).Include(p=>p.Recipient).ToListAsync();
+            return await _context.packages.Include(p => p.Deliver).Include(p => p.Recipient).ToListAsync();
 
         }
         public async Task<Packages> GetPackageByIDAsync(int code)
         {
-            var p= await _context.packages.FirstAsync(x => x.Id == code);
+            var p = await _context.packages.FirstAsync(x => x.Id == code);
             if (p == null)
                 return null;
             return p;
@@ -31,7 +31,7 @@ namespace Delivery.Data.Repositories
         }
         public async Task<Packages> AddPackageAsync(Packages package)
         {
-            var d =await _context.packages.FirstAsync(p => p.Id == package.Id);
+            var d = await _context.packages.FirstAsync(p => p.Id == package.Id);
             if (d == null)
             {
                 _context.packages.Add(d);
@@ -41,7 +41,7 @@ namespace Delivery.Data.Repositories
         }
         public async Task<Packages> UpdatePackagesAsync(int code, Packages package)
         {
-            var p =await _context.packages.FirstAsync(pac => pac.Id == package.Id);
+            var p = await _context.packages.FirstAsync(pac => pac.Id == package.Id);
             if (p != null)
             {
                 p.DeliverID = package.DeliverID;

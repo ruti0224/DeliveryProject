@@ -19,12 +19,12 @@ namespace Delivery.Data.Repositories
         }
         public async Task<List<Delivers>> GetDeliversAsync()
         {
-            return await _context.delivers.Include(d=>d.Packages).ToListAsync();
+            return await _context.delivers.Include(d => d.Packages).ToListAsync();
 
         }
         public async Task<Delivers> GetDeliverByIDAsync(int id)
         {
-            return await _context.delivers.FirstAsync(x=>x.Id==id);
+            return await _context.delivers.FirstAsync(x => x.Id == id);
 
         }
         public async Task<Delivers> AddDeliverAsync(Delivers deliver)
@@ -33,7 +33,7 @@ namespace Delivery.Data.Repositories
             if (d == null)
             {
                 _context.delivers.Add(deliver);
-                
+
             }
             return d;
         }

@@ -74,3 +74,4 @@ T:\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Service\obj\Debug\ne
 T:\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Service\obj\Debug\net8.0\Delivery.Service.pdb
 T:\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Service\obj\Debug\net8.0\ref\Delivery.Service.dll
 T:\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Service\obj\Debug\net8.0\Delivery.Service.sourcelink.json
+\\ZZ-FILESRV\Handesaim2\Group B\NetCore\רותי שרם\DeliveryProject\Delivery.Service\obj\Debug\net8.0\Delivery.Service.sourcelink.json

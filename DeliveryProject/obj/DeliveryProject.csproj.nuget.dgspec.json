@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj": {}
+    "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj": {}
   },
   "projects": {
-    "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj": {
+    "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj",
+        "projectUniqueName": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj",
         "projectName": "Delivery.Core",
-        "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj",
+        "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\obj\\",
+        "outputPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -85,14 +85,14 @@
         }
       }
     },
-    "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj": {
+    "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj",
+        "projectUniqueName": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj",
         "projectName": "Delivery.Data",
-        "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj",
+        "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\obj\\",
+        "outputPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -114,8 +114,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj": {
-                "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj"
+              "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj": {
+                "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj"
               }
             }
           }
@@ -137,13 +137,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.22, )"
+              "version": "[8.0.23, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.22, )"
+              "version": "[8.0.23, )"
             }
           },
           "imports": [
@@ -166,14 +166,14 @@
         }
       }
     },
-    "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj": {
+    "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj",
+        "projectUniqueName": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj",
         "projectName": "Delivery.Service",
-        "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj",
+        "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\obj\\",
+        "outputPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -195,8 +195,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj": {
-                "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj"
+              "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj": {
+                "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Core\\Delivery.Core.csproj"
               }
             }
           }
@@ -235,14 +235,14 @@
         }
       }
     },
-    "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj": {
+    "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
+        "projectUniqueName": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
         "projectName": "DeliveryProject",
-        "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
+        "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\DeliveryProject.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\obj\\",
+        "outputPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\DeliveryProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -264,11 +264,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj": {
-                "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj"
+              "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj": {
+                "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Data\\Delivery.Data.csproj"
               },
-              "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj": {
-                "projectPath": "\\\\ZZ-FILESRV\\Handesaim2\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj"
+              "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj": {
+                "projectPath": "T:\\Group B\\NetCore\\רותי שרם\\DeliveryProject\\Delivery.Service\\Delivery.Service.csproj"
               }
             }
           }
@@ -290,7 +290,7 @@
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[12.0.0, )"
+              "version": "[12.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

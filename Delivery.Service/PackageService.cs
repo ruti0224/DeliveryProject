@@ -9,7 +9,7 @@ using Delivery.Core.Services;
 
 namespace Delivery.Service
 {
-    public class PackageService: IPackageService
+    public class PackageService : IPackageService
     {
         private readonly IPackagesRespository _packageRepo;
 
@@ -27,14 +27,14 @@ namespace Delivery.Service
         }
         public async Task<Packages> AddPackageAsync(Packages package)
         {
-           var p=await _packageRepo.AddPackageAsync(package);
+            var p = await _packageRepo.AddPackageAsync(package);
             await _packageRepo.SaveAsync();
             return p;
 
         }
         public async Task<Packages> UpdatePackagesAsync(int id, Packages package)
         {
-           var p=await _packageRepo.UpdatePackagesAsync(id, package);
+            var p = await _packageRepo.UpdatePackagesAsync(id, package);
             await _packageRepo.SaveAsync();
             return p;
         }

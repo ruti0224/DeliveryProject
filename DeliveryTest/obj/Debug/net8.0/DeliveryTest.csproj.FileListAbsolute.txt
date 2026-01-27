@@ -930,3 +930,5 @@ T:\Group B\NetCore\רותי שרם\DeliveryProject\DeliveryTest\obj\Debug\net8.0
 T:\Group B\NetCore\רותי שרם\DeliveryProject\DeliveryTest\bin\Debug\net8.0\libman.json
 T:\Group B\NetCore\רותי שרם\DeliveryProject\DeliveryTest\bin\Debug\net8.0\AutoMapper.dll
 T:\Group B\NetCore\רותי שרם\DeliveryProject\DeliveryTest\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+\\ZZ-FILESRV\Handesaim2\Group B\NetCore\רותי שרם\DeliveryProject\DeliveryTest\obj\Debug\net8.0\DeliveryTest.sourcelink.json
+T:\Group B\NetCore\רותי שרם\DeliveryProject\DeliveryTest\obj\Debug\net8.0\DeliveryTest.sourcelink.json

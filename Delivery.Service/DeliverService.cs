@@ -9,11 +9,11 @@ using Delivery.Core.Services;
 
 namespace Delivery.Service
 {
-    public class DeliverService: IDeliverService
-    { 
+    public class DeliverService : IDeliverService
+    {
         private readonly IDeliverRepository _deliverRepo;
 
-        public  DeliverService(IDeliverRepository deliverRepo)
+        public DeliverService(IDeliverRepository deliverRepo)
         {
             _deliverRepo = deliverRepo;
         }
@@ -27,14 +27,14 @@ namespace Delivery.Service
         }
         public async Task<Delivers> AddDeliverAsync(Delivers deliver)
         {
-              var d=await  _deliverRepo.AddDeliverAsync(deliver);
+            var d = await _deliverRepo.AddDeliverAsync(deliver);
             await _deliverRepo.SaveAsync();
             return d;
 
         }
         public async Task<Delivers> UpdateDeliverAsync(int id, Delivers deliver)
-        {        
-           var d= await _deliverRepo.UpdateDeliverAsync(id, deliver);
+        {
+            var d = await _deliverRepo.UpdateDeliverAsync(id, deliver);
             await _deliverRepo.SaveAsync();
             return d;
 

@@ -17,9 +17,9 @@ namespace Delivery.Data.Repositories
         {
             _context = context;
         }
-        public async Task<List<<Recipients>> GetRecipientsAsync()
+        public async Task<List<Recipients>> GetRecipientsAsync()
         {
-            return await _context.recipients.Include(r=>r.Packages).ToListAsync();
+            return await _context.recipients.Include(r => r.Packages).ToListAsync();
 
         }
         public async Task<Recipients> GetRecipientByIDAsync(int id)
@@ -51,7 +51,7 @@ namespace Delivery.Data.Repositories
         }
         public async Task DeleteRecipientAsync(int id)
         {
-            var d =await _context.recipients.FirstAsync(p => p.Id == id);
+            var d = await _context.recipients.FirstAsync(p => p.Id == id);
             if (d != null)
             {
                 _context.recipients.Remove(d);
@@ -59,7 +59,7 @@ namespace Delivery.Data.Repositories
         }
         public async Task SaveAsync()
         {
-           await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }
