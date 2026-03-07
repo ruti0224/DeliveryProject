@@ -18,7 +18,11 @@ namespace Delivery.Data.Repositories
         }
         public async Task<List<Packages>> GetPackagesAsync()
         {
+<<<<<<< HEAD
             return await _context.packages.Include(p => p.Deliver).Include(p => p.recipient).ToListAsync();
+=======
+            return await _context.packages.Include(p => p.Deliver).Include(p => p.Recipient).ToListAsync();
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
 
         }
         public async Task<Packages> GetPackageByIDAsync(int code)

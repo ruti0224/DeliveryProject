@@ -1,5 +1,9 @@
 ﻿using Delivery.Core.Services;
+<<<<<<< HEAD
 
+=======
+using Delivery.Core.Services;
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
 using Delivery.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
@@ -27,9 +31,15 @@ namespace DeliveryProject.Controllers
         [HttpGet]
         public async Task<List<PackagesDTO>> Get()
         {
+<<<<<<< HEAD
             var plst = await _packageServ.GetPackagesAsync();
             var DTOlst = new List<PackagesDTO>();
             DTOlst = _mapper.Map<List<PackagesDTO>>(plst);
+=======
+            var plst=await _packageServ.GetPackagesAsync();
+            var DTOlst=new List<PackagesDTO>();
+            DTOlst=_mapper.Map<List<PackagesDTO>>(plst);
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
             return DTOlst;
         }
         //האם חבילה נמצאת 
@@ -37,8 +47,13 @@ namespace DeliveryProject.Controllers
         [HttpGet("{code}")]
         public async Task<ActionResult> Get(int code)
         {
+<<<<<<< HEAD
             var pc = await _packageServ.GetPackageByIDAsync(code);
             var pDTO = _mapper.Map<PackagesDTO>(pc);
+=======
+            var pc =await _packageServ.GetPackageByIDAsync(code);
+            var pDTO=_mapper.Map<PackagesDTO>(pc);
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
             if (pc == null)
             {
                 return NotFound();
@@ -64,7 +79,11 @@ namespace DeliveryProject.Controllers
         public async Task<ActionResult> Post([FromBody] Packages value)
         {
             var package = new Packages { Description = value.Description, Status = value.Status, DeliverID = value.DeliverID, RecipientID = value.RecipientID };
+<<<<<<< HEAD
             var pac = await _packageServ.GetPackageByIDAsync(value.Id);
+=======
+            var pac =await _packageServ.GetPackageByIDAsync(value.Id);
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
             if (pac == null)
             {
                 await _packageServ.AddPackageAsync(value);
@@ -77,9 +96,15 @@ namespace DeliveryProject.Controllers
         [HttpPut("{code}")]
         public async Task<ActionResult> Put(int code, [FromBody] Packages value)
         {
+<<<<<<< HEAD
             var package = new Packages { Description = value.Description, Status = value.Status, DeliverID = value.DeliverID, RecipientID = value.RecipientID };
             var pac = await _packageServ.GetPackageByIDAsync(code);
             if (pac == null)
+=======
+            var package = new Packages {Description=value.Description,Status=value.Status,DeliverID=value.DeliverID,RecipientID=value.RecipientID };
+            var pac=await _packageServ.GetPackageByIDAsync(code);
+            if(pac == null)
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
             {
                 return BadRequest();
 
@@ -95,7 +120,11 @@ namespace DeliveryProject.Controllers
         [HttpDelete("{code}")]
         public async Task<ActionResult> Delete(int code)
         {
+<<<<<<< HEAD
             var pac = await _packageServ.GetPackageByIDAsync(code);
+=======
+            var pac=await _packageServ.GetPackageByIDAsync(code);
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
             if (pac == null)
             {
                 BadRequest();

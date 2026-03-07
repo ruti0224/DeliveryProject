@@ -1,16 +1,25 @@
 
 using Delivery.Core.Services;
-using DeliveryProject;
+using DeliveryProject.Middleware;
 using Delivery.Core;
 using Delivery.Core.Respositories;
 using Delivery.Service;
 using Delivery.Data.Repositories;
 using Delivery.Data;
+<<<<<<< HEAD
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+=======
+using DeliveryProject;
+//using Delivery.Service;
+//using Delivery.Data.Repositories;
+
+
+
+>>>>>>> dcb4604375466e6b02a5f82eb243040f91a35087
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -98,6 +107,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseShabbatMiddleware();
 
 app.UseAuthorization();
 
