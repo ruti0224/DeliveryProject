@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Delivery.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20251202125624_initt")]
-    partial class initt
+    [Migration("20260224114043_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,6 +76,10 @@ namespace Delivery.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DeliverID");
+
+                    b.HasIndex("RecipientID");
+
                     b.ToTable("packages");
                 });
 
@@ -106,6 +110,59 @@ namespace Delivery.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("recipients");
+                });
+
+            modelBuilder.Entity("Delivery.Core.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users");
+                });
+
+            modelBuilder.Entity("Delivery.Core.Models.Packages", b =>
+                {
+                    b.HasOne("Delivery.Core.Models.Delivers", "Deliver")
+                        .WithMany("Packages")
+                        .HasForeignKey("DeliverID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Delivery.Core.Models.Recipients", "recipient")
+                        .WithMany("Packages")
+                        .HasForeignKey("RecipientID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Deliver");
+
+                    b.Navigation("recipient");
+                });
+
+            modelBuilder.Entity("Delivery.Core.Models.Delivers", b =>
+                {
+                    b.Navigation("Packages");
+                });
+
+            modelBuilder.Entity("Delivery.Core.Models.Recipients", b =>
+                {
+                    b.Navigation("Packages");
                 });
 #pragma warning restore 612, 618
         }

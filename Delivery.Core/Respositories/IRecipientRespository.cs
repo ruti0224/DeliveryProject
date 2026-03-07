@@ -9,12 +9,12 @@ namespace Delivery.Core.Respositories
 {
     public interface IRecipientRespository
     {
-        public IEnumerable<Recipients> GetRecipients();
-        public Recipients GetRecipientByID(int id);
+        public Task<List<Recipients>> GetRecipientsAsync();
+        public Task<Recipients> GetRecipientByIDAsync(int id);
 
-        public Recipients AddRecipient(Recipients recipient);
-        public Recipients UpdateRecipient(int id, Recipients recipient);
-        public void DeleteRecipient(int id);
-        public void Save();
+        public Task<Recipients> AddRecipientAsync(Recipients recipient);
+        public Task<Recipients> UpdateRecipientAsync(int id, Recipients recipient);
+        public Task DeleteRecipientAsync(int id);
+        public Task SaveAsync();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Delivery.Core.Services;
+
 using Delivery.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
@@ -24,20 +25,20 @@ namespace DeliveryProject.Controllers
 
         // GET: api/<PackagesController>
         [HttpGet]
-        public IEnumerable<PackagesDTO> Get()
+        public async Task<List<PackagesDTO>> Get()
         {
-            var plst= _packageServ.GetPackages();
-            var DTOlst=new List<PackagesDTO>();
-            DTOlst=_mapper.Map<List<PackagesDTO>>(plst);
+            var plst = await _packageServ.GetPackagesAsync();
+            var DTOlst = new List<PackagesDTO>();
+            DTOlst = _mapper.Map<List<PackagesDTO>>(plst);
             return DTOlst;
         }
         //האם חבילה נמצאת 
         // GET api/<PackagesController>/5
         [HttpGet("{code}")]
-        public ActionResult Get(int code)
+        public async Task<ActionResult> Get(int code)
         {
-            var pc = _packageServ.GetPackageByID(code);
-            var pDTO=_mapper.Map<PackagesDTO>(pc);
+            var pc = await _packageServ.GetPackageByIDAsync(code);
+            var pDTO = _mapper.Map<PackagesDTO>(pc);
             if (pc == null)
             {
                 return NotFound();
@@ -60,13 +61,13 @@ namespace DeliveryProject.Controllers
         //}
         //// POST api/<PackagesController>
         [HttpPost]
-        public ActionResult Post([FromBody] Packages value)
+        public async Task<ActionResult> Post([FromBody] Packages value)
         {
             var package = new Packages { Description = value.Description, Status = value.Status, DeliverID = value.DeliverID, RecipientID = value.RecipientID };
-            var pac = _packageServ.GetPackageByID(value.Id);
+            var pac = await _packageServ.GetPackageByIDAsync(value.Id);
             if (pac == null)
             {
-               _packageServ.AddPackage(value);
+                await _packageServ.AddPackageAsync(value);
                 return Ok(value);
             }
             return Conflict();
@@ -74,27 +75,27 @@ namespace DeliveryProject.Controllers
 
         // PUT api/<PackagesController>/5
         [HttpPut("{code}")]
-        public ActionResult Put(int code, [FromBody] Packages value)
+        public async Task<ActionResult> Put(int code, [FromBody] Packages value)
         {
-            var package = new Packages {Description=value.Description,Status=value.Status,DeliverID=value.DeliverID,RecipientID=value.RecipientID };
-            var pac= _packageServ.GetPackageByID(code);
-            if(pac == null)
+            var package = new Packages { Description = value.Description, Status = value.Status, DeliverID = value.DeliverID, RecipientID = value.RecipientID };
+            var pac = await _packageServ.GetPackageByIDAsync(code);
+            if (pac == null)
             {
                 return BadRequest();
 
             }
             pac.Status = package.Status;
             pac.Description = package.Description;
-            pac.DeliverID= package.DeliverID;
-            pac.RecipientID= package.RecipientID;
+            pac.DeliverID = package.DeliverID;
+            pac.RecipientID = package.RecipientID;
             return Ok(pac);
         }
 
         // DELETE api/<PackagesController>/5
         [HttpDelete("{code}")]
-        public ActionResult Delete(int code)
+        public async Task<ActionResult> Delete(int code)
         {
-            var pac= _packageServ.GetPackageByID(code);
+            var pac = await _packageServ.GetPackageByIDAsync(code);
             if (pac == null)
             {
                 BadRequest();

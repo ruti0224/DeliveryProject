@@ -24,36 +24,36 @@ namespace DeliveryProject.Controllers
         }
         // GET: api/<DeliversController>
         [HttpGet]
-        public IEnumerable<DeliversDTO> Get()
+        public async Task<List<DeliversDTO>> Get()
         {
-            var lst = _deliverServ.GetDelivers();
-            var DTOlst=new List<DeliversDTO>();
-            DTOlst=_mapper.Map< List<DeliversDTO>>(lst);
+            var lst = await _deliverServ.GetDeliversAsync();
+            var DTOlst = new List<DeliversDTO>();
+            DTOlst = _mapper.Map<List<DeliversDTO>>(lst);
             return DTOlst;
         }
 
         // GET api/<DeliversController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            var d= _deliverServ.GetDeliverByID(id);
-            var dDTO=_mapper.Map<DeliversDTO>(d);
-            if(d==null)
+            var d = await _deliverServ.GetDeliverByIDAsync(id);
+            var dDTO = _mapper.Map<DeliversDTO>(d);
+            if (d == null)
             {
                 return NotFound();
             }
-           return Ok(dDTO);
+            return Ok(dDTO);
         }
 
         // POST api/<DeliversController>
         [HttpPost]
-        public ActionResult Post([FromBody] DeliversPostModel value)
+        public async Task<ActionResult> Post([FromBody] DeliversPostModel value)
         {
-            var deliver=new Delivers { Name=value.Name,Address=value.Address,PhoneNumber=value.PhoneNumber,Email=value.Email};
-            var d = _deliverServ.GetDeliverByID(deliver.Id);
+            var deliver = new Delivers { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber, Email = value.Email };
+            var d = await _deliverServ.GetDeliverByIDAsync(deliver.Id);
             if (d == null)
             {
-              var del= _deliverServ.AddDeliver(deliver);
+                var del = await _deliverServ.AddDeliverAsync(deliver);
                 return Ok(del);
             }
             return Conflict();
@@ -62,24 +62,24 @@ namespace DeliveryProject.Controllers
 
         // PUT api/<DeliversController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] DeliversPostModel value)
+        public async Task<ActionResult> Put(int id, [FromBody] DeliversPostModel value)
         {
             var deliver = new Delivers { Name = value.Name, Address = value.Address, PhoneNumber = value.PhoneNumber, Email = value.Email };
-            var d = _deliverServ.GetDeliverByID(id);
+            var d = await _deliverServ.GetDeliverByIDAsync(id);
             if (d == null)
             {
                 return NotFound();
 
             }
-            _deliverServ.UpdateDeliver(id,deliver);
+            await _deliverServ.UpdateDeliverAsync(id, deliver);
             return Ok(d);
         }
 
         // DELETE api/<DeliversController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var d = _deliverServ.GetDeliverByID(id);
+            var d = await _deliverServ.GetDeliverByIDAsync(id);
             if (d == null)
             {
                 BadRequest();

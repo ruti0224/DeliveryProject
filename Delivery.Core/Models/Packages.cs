@@ -8,9 +8,11 @@
         public string Description { get; set; }
         public StausP Status { get; set; }
 
-       public Delivers Deliver { get; set; }
-       public Recipients Recipient { get; set; }
+        public Delivers Deliver { get; set; }
+        public Recipients recipient { get; set; }
 
+
+        
     }
     public enum StausP
     {

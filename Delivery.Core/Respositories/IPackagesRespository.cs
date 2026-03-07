@@ -9,13 +9,13 @@ namespace Delivery.Core.Respositories
 {
     public interface IPackagesRespository
     {
-        public IEnumerable<Packages> GetPackages();
-        public Packages GetPackageByID(int code);
+        public Task<List<Packages>> GetPackagesAsync();
+        public Task<Packages> GetPackageByIDAsync(int code);
 
-        public Packages AddPackage(Packages package);
-        public Packages UpdatePackages(int code, Packages package);
-        public void DeletePackage(int code);
-        public void Save();
+        public Task<Packages> AddPackageAsync(Packages package);
+        public Task<Packages> UpdatePackagesAsync(int code, Packages package);
+        public Task DeletePackageAsync(int code);
+        public Task SaveAsync();
 
     }
 }

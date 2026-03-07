@@ -11,7 +11,8 @@ namespace Delivery.Core
 {
     public class MappingProfile : Profile
     {
-        public MappingProfile() {
+        public MappingProfile()
+        {
             CreateMap<Delivers, DeliversDTO>().ReverseMap();
             CreateMap<Packages, PackagesDTO>().ReverseMap();
             CreateMap<Recipients, RecipientsDTO>().ReverseMap();
