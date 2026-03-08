@@ -1,88 +1,69 @@
-Here's the improved `README.md` file, incorporating the new content while maintaining the existing structure and information:
-
-# DeliveryProject
+﻿# DeliveryProject 📦
 
-A simple delivery management Web API built with ASP.NET Core (.NET 8). The API manages deliveries, recipients, packages, and users, and supports JWT authentication and Swagger for testing.
+A professional Backend Web API for delivery management systems, built with **ASP.NET Core (.NET 8)**. This project demonstrates the implementation of modern software architecture patterns, focused on scalability, security, and maintainable code.
 
-## Requirements
+## 🚀 Key Features
 
+- **Clean Architecture:** Divided into logical layers (Core, Data, Service, API) to ensure a clear separation of concerns.
+- **Advanced Middleware:** Custom `ShabbatMiddleware` implementation, showcasing deep understanding of the ASP.NET Core request pipeline.
+- **Security:** Integrated **JWT Bearer Authentication** to secure sensitive API endpoints.
+- **Data Integrity:** Utilizes **Entity Framework Core** with the Repository Pattern for efficient data access.
+- **DTO Mapping:** Comprehensive use of **AutoMapper** to decouple domain models from external data structures.
+- **API Documentation:** Interactive documentation using **Swagger UI** for streamlined testing and integration.
+
+## 🛠️ Tech Stack
+
+- **Backend:** C# | ASP.NET Core 8.0
+- **Database:** SQL Server
+- **ORM:** Entity Framework Core
+- **Libraries:** AutoMapper, JWT Authentication, Swagger
+
+## 🏗️ Project Structure
+
+- **Delivery.Core:** Domain entities, DTOs, interfaces, and mapping profiles.
+- **Delivery.Data:** Database context, migrations, and repository implementations.
+- **Delivery.Service:** Business logic and service layer.
+- **DeliveryProject (API):** Controllers, custom middlewares, and configurations.
+
+## 🏁 Getting Started
+
+### Prerequisites
 - .NET 8 SDK
-- Visual Studio 2022/2023 or Visual Studio Code
-- SQL Server (or configure another EF Core provider in `appsettings.json`)
+- Visual Studio 2022
+- SQL Server
 
-## Getting started
+### Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
+```bash
+   git clone [https://github.com/ruti0224/DeliveryProject.git](https://github.com/ruti0224/DeliveryProject.git)
+   cd DeliveryProject
+   ```
+2. **Database Update:**
+   Open the Package Manager Console in Visual Studio and run:
+   ```powershell
+   Update-Database
+   ```
+3. **Configure JWT & Connection String:**
+   Update the `appsettings.json` file in the DeliveryProject folder:
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=DeliveryDb;Trusted_Connection=True;"
+   },
+   "JWT": {
+     "Issuer": "your-issuer",
+     "Audience": "your-audience",
+     "Key": "your-secure-32-character-secret-key"
+   }
+   ```
+4. **Run the API:**
+   Press **F5** in Visual Studio or run:
+   ```bash
+   dotnet run --project DeliveryProject
+   ```
+## 🛡️ License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-    ```bash
-    git clone https://github.com/ruti0224/DeliveryProject.git
-    cd DeliveryProject
-    ```
-
-2. Configure the database connection and JWT settings in `appsettings.json` (add `JWT:Issuer`, `JWT:Audience`, `JWT:Key`, and a connection string for EF Core).
-
-3. Run database migrations (if using EF Core migrations):
-
-    ```bash
-    dotnet ef database update --project Delivery.Data --startup-project DeliveryProject
-    ```
-
-4. Run the API:
-
-    ```bash
-    dotnet run --project DeliveryProject
-    ```
-
-   Or open the solution in Visual Studio and press F5.
-
-## API
-
-- Swagger UI is available at `/swagger` when running in Development.
-- The controllers expose CRUD endpoints for `Delivers`, `Recipients`, `Packages`, and `Users`. See controller classes under `DeliveryProject/Controllers` for exact routes and payloads.
-
-## Authentication
-
-This project uses JWT Bearer authentication. Configure these keys in `appsettings.json`:
-
-"JWT": {
-  "Issuer": "your-issuer",
-  "Audience": "your-audience",
-  "Key": "your-secret-key"
-}
-
-Ensure the secret key is sufficiently long and stored securely for production.
-
-## Development notes
-
-- Automapper profiles are registered (`MappingProfile`).
-- `DataContext` is the EF Core DbContext.
-- Services and repositories are registered in `Program.cs` with `AddScoped` lifetimes.
-- The project includes a custom middleware `ShabbatMiddleware` used in the request pipeline.
-
-## Coding standards
-
-This repository uses an `.editorconfig` and `CONTRIBUTING.md` to define formatting and contribution guidelines. Follow them when making changes.
-
-## Tests
-
-Unit and integration tests (if present) can be run with the `dotnet test` command targeting the test projects.
-
-## Contributing
-
-- Fork the repo, create a feature branch, and open a PR.
-- Run the solution and ensure all unit tests pass.
-- Follow the rules in `CONTRIBUTING.md` and keep changes small and focused.
-
-## License
-
-Specify the project license here.
-
-## Contact
-
-For questions, open an issue on the repository or contact the project maintainers directly.
-
-### Changes Made:
-- Corrected a typo in "delivers" to "deliveries" in the project description.
-- Added a space for better readability in the "Getting started" section.
-- Minor formatting adjustments for consistency and clarity.
-- Enhanced the "Contact" section to suggest contacting project maintainers directly, if applicable.
+## ✉️ Contact
+**Ruti Shrem** - rutishrem0224@gmail.com  
+**Project Link:** [https://github.com/ruti0224/DeliveryProject](https://github.com/ruti0224/DeliveryProject)
